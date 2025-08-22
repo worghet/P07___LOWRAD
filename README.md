@@ -1,2 +1,2 @@
 # P07___LOWRAD
-learned react + electron for desktop app
+learnin react + electron for desktop app
