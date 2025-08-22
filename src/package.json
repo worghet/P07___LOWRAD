@@ -1,0 +1,14 @@
+{
+  "name": "lowrad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron --no-sandbox ."
+  },
+  "author": "worghet",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^37.3.1"
+  }
+}
