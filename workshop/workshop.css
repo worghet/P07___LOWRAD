@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'pixdig';
+    src: url('pixdig.otf') format('opentype');
+}
+
+* {
+    font-family: 'pixdig', monospace;
+    letter-spacing: 3px;
+}
+
+#stations {
+    padding-bottom: 10px;
+    /*border: solid 6px black;*/
+    width: 400px; /* set a fixed width for now */
+    /*height: 200px;  !* set a fixed height *!*/
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* space between buttons */
+    /*grid-template-columns: 1fr 1fr 1fr; !* 3 buttons across *!*/
+}
+
+
+#stations button {
+    width: 100%;
+    height: 100%;
+    border: none; /* cool effect if removed*/
+    padding: 10px 0px 10px 0px;
+    /*border: 5px solid #AAAAAA;  FANCY EFFECT!!*/
+    box-shadow: 0 5px #AAAAAA;
+    background: #CCCCCC; /* retro yellow */
+    font-size: 20px;
+    /*font-family: monospace;*/
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+#stations button.active {
+    transform: translateY(5px);
+    box-shadow: 0 0 #AAAAAA;
+    background: #888888;
+    color: white;
+}
+
+#stations button:hover {
+    filter: brightness(90%);
+}
+
+#stations button:active {
+    transform: translateY(5px);
+    box-shadow: 0 0 #AAAAAA; /* remove shadow instead of border */
+}
+
+/* -------------------------------- */
+#cat-side {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* keeps it horizontally centered */
+    align-items: flex-end;   /* pushes image to the bottom */
+}
+
+#cat-side img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* preserves aspect ratio */
+}
+
+
+
+
+/* -------------------------------- */
+
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 10px;
+}
+
+#controls button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    background: #CCCCCC;
+    box-shadow: 0 5px #AAAAAA;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: transform 0.1s;
+}
+
+
+/*#controls button.active {*/
+/*    transform: translateY(5px);*/
+/*    box-shadow: 0 0 #AAAAAA;*/
+/*    background: #888888;*/
+/*    color: white;*/
+/*    filter: invert(1);*/
+
+
+/*}*/
+
+#controls button.active {
+    transform: translateY(5px);
+    box-shadow: 0 0 #AAAAAA; /* remove shadow to show pressed */
+    background: #888888;     /* dark gray */
+    filter: invert(1);        /* inverts colors of the icon */
+}
+
+#controls button img {
+    width: 70%;
+    height: 70%;
+    image-rendering: pixelated;
+}
+
+#controls button:active {
+    transform: translateY(5px);
+    box-shadow: 0 0 #AAAAAA;
+    background: #888888;
+}
