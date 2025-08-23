@@ -4,11 +4,13 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "electron --no-sandbox ."
+    "test": "electron --no-sandbox .",
+    "dev": "cross-env ELECTRON_START_URL=http://localhost:5173 electron ."
   },
   "author": "worghet",
   "license": "ISC",
   "devDependencies": {
+    "cross-env": "^10.0.0",
     "electron": "^37.3.1"
   }
 }

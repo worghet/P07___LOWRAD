@@ -23,8 +23,16 @@ app.on('ready', function() {
 	  resizable: false,
         });
 	
+	if (process.env.ELECTRON_START_URL) {
+	    // Dev mode: Vite server
+	    mainWindow.loadURL(process.env.ELECTRON_START_URL);
+	} else {
+	    // Prod mode: built React files
+	    mainWindow.loadFile(path.join(__dirname, "ui/dist/index.html"));
+	}
 
-	mainWindow.loadFile('index.html');
+
+	//mainWindow.loadFile('sample_ui.html');
 
 	// set window content to my github page :)
 	// mainWindow.loadURL('https://github.com/worghet');

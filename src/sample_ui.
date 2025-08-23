@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-image: url("sample_ui.png");
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+</body>
+</html>
+
