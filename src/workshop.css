@@ -1,0 +1,281 @@
+@font-face {
+    font-family: 'pixdig';
+    src: url('assets/pixdig.otf') format('opentype');
+}
+
+
+* {
+    font-family: 'pixdig', monospace;
+    letter-spacing: 3px;
+    user-select: none;
+    /*cursor: url("default_pointing.cur"), auto;*/
+}
+
+
+/*button {*/
+/*    cursor: url("default_pointing.cur"), auto;*/
+/*}*/
+
+#radio {
+    margin: 5%;
+}
+
+#stations {
+    padding-bottom: 10px;
+    /*border: solid 6px black;*/
+    width: 400px; /* set a fixed width for now */
+    /*height: 200px;  !* set a fixed height *!*/
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* space between buttons */
+    /*grid-template-columns: 1fr 1fr 1fr; !* 3 buttons across *!*/
+}
+
+
+#stations button {
+    width: 100%;
+    height: 100%;
+    border: none; /* cool effect if removed*/
+    padding: 10px 0px 10px 0px;
+    /*border: 5px solid #AAAAAA;  FANCY EFFECT!!*/
+    box-shadow: 0 5px #AAAAAA;
+    background: #CCCCCC; /* retro yellow */
+    font-size: 20px;
+    /*font-family: monospace;*/
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+#stations button.active {
+    transform: translateY(5px);
+    box-shadow: 0 0 #AAAAAA;
+    background: #888888;
+    color: white;
+}
+
+#stations button:hover {
+    filter: brightness(90%);
+}
+
+#stations button:active {
+    transform: translateY(5px);
+    box-shadow: 0 0 #AAAAAA; /* remove shadow instead of border */
+}
+
+/* -------------------------------- */
+#cat-side {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* keeps it horizontally centered */
+    align-items: flex-end;   /* pushes image to the bottom */
+}
+
+#cat-side img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* preserves aspect ratio */
+}
+
+
+
+
+/* -------------------------------- */
+
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 10px;
+}
+
+#controls button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    background: #CCCCCC;
+    box-shadow: 0 5px #AAAAAA;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: transform 0.1s;
+}
+
+
+/*#controls button.active {*/
+/*    transform: translateY(5px);*/
+/*    box-shadow: 0 0 #AAAAAA;*/
+/*    background: #888888;*/
+/*    color: white;*/
+/*    filter: invert(1);*/
+
+
+/*}*/
+
+#controls button.active {
+    transform: translateY(5px);
+    box-shadow: 0 0 #AAAAAA; /* remove shadow to show pressed */
+    background: #888888;     /* dark gray */
+    filter: invert(1);        /* inverts colors of the icon */
+    cursor: not-allowed;   /* shows the blocked cursor */
+
+}
+
+
+#controls button img {
+    width: 70%;
+    height: 70%;
+    image-rendering: pixelated;
+}
+
+#controls button:active {
+    transform: translateY(5px);
+    box-shadow: 0 0 #AAAAAA;
+    background: #888888;
+}
+
+/* ------------------------------------------- */
+#timer-controls {
+    display: flex;
+    width: 400px;   /* align with stations */
+    height: 60px;   /* same as play/stop buttons */
+    margin-top: 10px;
+    box-sizing: border-box;
+    border: 2px solid #888888; /* same as divider thickness */
+}
+
+/* Input */
+#timer-controls input {
+    width: 100px;
+    height: 100%;
+    border: none; /* rely on parent border */
+    border-right: 2px solid #888888; /* divider */
+    background: #EEEEEE;
+    font-family: 'pixdig', monospace;
+    font-size: 24px;
+    padding-left: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Button */
+#timer-controls button {
+    flex: 1;
+    height: 100%;
+    border: none; /* rely on parent border */
+    background: #CCCCCC; /* distinct from input */
+    cursor: pointer;
+    font-family: 'pixdig', monospace;
+    font-size: 20px; /* match rest of page’s button/text scale */
+    box-shadow: none;
+    transition: background 0.1s;
+}
+
+/* Hover + active */
+#timer-controls button:hover {
+    /*background-color: #CCCCCC;*/
+    filter: brightness(90%);
+
+}
+
+#timer-controls button:active {
+    transform: translateY(0px);
+    background: #888888;    /* same as stop button active */
+    color: white;           /* match text */
+
+    /*transform: translateY(5px);*/
+    /*box-shadow: 0 0 #AAAAAA; !* remove shadow to show pressed *!*/
+    /*background: #888888;     !* dark gray *!*/
+    /*filter: invert(1);*/
+}
+
+#timer-start-btn:disabled {
+    background: #888888;    /* same as stop button active */
+    color: white;           /* match text */
+    cursor: not-allowed;    /* disabled cursor */
+    box-shadow: none;       /* keep inset/shadow as is */
+}
+
+#timer-start-btn:disabled:hover {
+    background: #888888;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+#timer {
+    display: flex;
+    flex-direction: column;      /* stack text + buttons */
+    justify-content: center;
+    align-items: center;
+
+    min-height: 95vh;           /* optional: ensures full screen if you want */
+    font-family: 'pixdig', monospace;
+    letter-spacing: 3px;
+    position: relative;          /* for absolutely positioned buttons */
+    /*padding: 20px;               !* optional for spacing *!*/
+}
+
+
+#timer p {
+    font-size: 35vh;
+    text-align: center;
+    margin: 0;
+}
+
+/*#timer-buttons {*/
+/*    position: absolute;*/
+/*    top: 10px;*/
+/*    left: 10px;*/
+/*    display: flex;*/
+/*    gap: 10px;*/
+/*}*/
+
+
+/*#timer-buttons button {*/
+/*    padding: 4px 6px;*/
+/*    font-family: 'pixdig', monospace;*/
+/*    font-size: 14px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+
+ #timer-buttons {
+     position: absolute;
+     top: 2px;   /* distance from bottom */
+     left: 2px;     /* distance from left */
+     display: flex;
+     gap: 10px;
+ }
+
+#timer-buttons button {
+    padding: 4px 6px;
+    font-family: 'pixdig', monospace;
+    font-size: 14px;        /* same as other buttons */
+    background: #CCCCCC;    /* retro gray */
+    border: 2px solid #888888;
+    /*box-shadow: 0 5px #AAAAAA;*/
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+#timer-buttons button:hover {
+    filter: brightness(90%);
+}
+
+#timer-buttons button:active {
+    background: #888888;
+    color: white;
+}

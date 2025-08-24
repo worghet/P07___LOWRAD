@@ -15,21 +15,32 @@ app.on('ready', function() {
 
 	// render window
 	mainWindow = new BrowserWindow({
-	  width: 800,
-	  height: 350,
+	  width: 950,
+	  height: 440,
 	  backgroundColor: '#FFFFFF',
 	  autoHideMenuBar: true,
 	  title: "LOWRAD",
-	  resizable: false,
-        });
-	
-	if (process.env.ELECTRON_START_URL) {
-	    // Dev mode: Vite server
-	    mainWindow.loadURL(process.env.ELECTRON_START_URL);
-	} else {
-	    // Prod mode: built React files
-	    mainWindow.loadFile(path.join(__dirname, "ui/dist/index.html"));
-	}
+	  resizable: true,
+    });
+    mainWindow.setMinimumSize(950, 440); // width, height
+
+
+    mainWindow.loadFile("workshop.html");
+
+    mainWindow.setAspectRatio(950 / 440); // locks resizing to 16:9
+
+
+    mainWindow.webContents.on('did-finish-load', () => {
+        mainWindow.webContents.setZoomFactor(1); // 1 = 100%
+    });
+
+    mainWindow.on('resize', () => {
+        const [width, height] = mainWindow.getSize();
+        const baseHeight = 950;      // your "100%" scale reference
+        const scaleFactor = 2.1*height / baseHeight;
+        mainWindow.webContents.setZoomFactor(scaleFactor);
+    });
+
 
 
 	//mainWindow.loadFile('sample_ui.html');

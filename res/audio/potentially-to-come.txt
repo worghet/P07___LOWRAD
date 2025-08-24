@@ -1,0 +1,9 @@
+so an idea i had was to make a offline version of this app.
+
+or at least make this app accessible both with internet and without.
+
+the way it would work, is id download clips off youtube of lofi (30min-1h), then id just play at a random point when selected.
+
+that would be a offline "stream".
+
+those mp3 files would be in this directory. But im not doin that right now :)

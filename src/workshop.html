@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>LOWRAD</title>
+        <link rel="stylesheet" href="workshop.css">
+    </head>
+
+    <body>
+        <div id="radio">
+            <h1>Luna's Radio Menu</h1>
+<!--            <h1>Stations Available</h1>-->
+            <h4>current station - <span id="current-station"></span></h4>
+
+
+<!--            stations-->
+            <div id="stations">
+                <button id="lofi247-btn">✦ LOFI 24/7 ✦</button>
+                <button id="chillofi-btn">♫ CHILLOFI RADIO ♫</button>
+                <button id="nightwave-btn">☾ NIGHTWAVE PLAZA ☽</button>
+            </div>
+
+<!--            controls-->
+            <div id="controls">
+                <div style="display: flex; flex-direction: row; gap: 20px; margin-top: 10px; align-items: center;">
+                    <!-- Play/Stop buttons -->
+                    <div style="display: flex; flex-direction: row; gap: 10px;">
+                        <button id="play-btn" disabled class="active"><img src="assets/play.svg"></button>
+                        <button id="stop-btn" disabled class="active"><img src="assets/stop.svg"></button>
+                    </div>
+
+                    <!-- Timer -->
+                    <div id="timer-controls">
+                        <input type="number" id="timer-input" placeholder="MIN"/>
+                        <button id="timer-start-btn" disabled="disabled">START</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div id="cat-side">
+                <img src="assets/kotik.png">
+            </div>
+
+        </div>
+
+
+        <div id="timer" style="display: none;">
+            <p>23:01</p>
+            <div id="timer-buttons">
+                <button id="cancel-timer-btn">Dismiss Timer</button>
+                <button id="toggle-fullscreen-btn">Toggle Fullscreen</button>
+            </div>
+        </div>
+
+
+
+        <script type="module" src="workshop.js"></script>
+
+    </body>
+</html>
