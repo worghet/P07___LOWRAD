@@ -1,4 +1,4 @@
-# P07___LOWRAD
+# P07___LOWRAD 
 learnin ~~react~~ (ill use react for something else) + electron for desktop app
 
 customized to be retro + based on this super tech savvy yet stupid thing
@@ -11,3 +11,5 @@ again, tech savvy
 
 radios connected to:
 - ill put links here when i feel like it y'know
+
+(this app is finished -> contact me for the release; its too big for github)
