@@ -34,7 +34,7 @@ const radio_div = document.getElementById("radio");
 const timer_div = document.getElementById("timer");
 const cancel_timer_button = document.getElementById("cancel-timer-btn");
 const toggle_fullscreen_button = document.getElementById("toggle-fullscreen-btn");
-
+const minutes_spent_display = document.getElementById("minutes-spent-display");
 
 // PROGRAM STARTS HERE
 
@@ -59,6 +59,12 @@ toggle_fullscreen_button.addEventListener("click", () => toggle_fullscreen());
 
 
 
+// let minutes_spent_listening = 0
+// setInterval(() => {
+//     minutes_spent_listening++;
+//     minutes_spent_display.innerHTML = minutes_spent_listening;
+//     update_minutes_spent_display()
+// }, 1000)
 
 
 // RADIO FUNCTIONS -----------

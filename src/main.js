@@ -21,6 +21,8 @@ app.on('ready', function() {
 	  autoHideMenuBar: true,
 	  title: "LOWRAD",
 	  resizable: true,
+        icon: path.join(__dirname, "lowrad_icon.png")
+
     });
     mainWindow.setMinimumSize(950, 440); // width, height
 
