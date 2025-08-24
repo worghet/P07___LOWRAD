@@ -1,5 +1,5 @@
 # P07___LOWRAD
-learnin react + electron for desktop app
+learnin ~~react~~ (ill use react for something else) + electron for desktop app
 
 customized to be retro + based on this super tech savvy yet stupid thing
 
