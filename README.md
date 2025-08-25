@@ -1,5 +1,10 @@
+### note: build zip is too big to release here - contact me somehow if you want it :)
+
+- - -
+
+
 ## why i made this
-learnin ~~react (ill use react for something else) and~~ electron for desktop app.. 
+learnin ~~react and~~ electron for desktop app..
 
 ## potential updates
 some things i would add:
@@ -33,9 +38,3 @@ luna - my tech savvy black kitty
 ![2623](https://github.com/user-attachments/assets/a6758920-79d2-4507-9278-3aebc373504b)
 
 ![2622](https://github.com/user-attachments/assets/040d82be-161d-4e30-81da-d184062c9547)
-
-<<<<<<< HEAD
-radios connected to:
-- ill put links here when i feel like it y'know
-
-(this app is finished -> contact me for the release; its too big for github)
