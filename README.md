@@ -1,4 +1,24 @@
-### note: build zip is too big to release here - contact me somehow if you want it :)
+### note: build zip is too big to release here - contact me if you want it (or build it urself w electron) 
+
+- - -
+
+## screenshots
+
+on opening the app
+
+<img width="977" height="507" alt="Screenshot from 2025-08-24 22-47-09" src="https://github.com/user-attachments/assets/04a8c244-38e2-41d0-b99f-ebe3aa55dbf6" />
+
+selecting a station and playing it
+
+<img width="977" height="507" alt="Screenshot from 2025-08-24 22-47-28" src="https://github.com/user-attachments/assets/b79367e5-9172-4787-88c8-b1f623a46b18" />
+
+stopping the station, choosing another one, and inputting a timer value
+
+<img width="977" height="507" alt="Screenshot from 2025-08-24 22-47-51" src="https://github.com/user-attachments/assets/8f2741bb-a7c7-4919-8cd8-64446765846c" />
+
+timer (it flashes and rings when reaches 0)
+
+<img width="977" height="507" alt="Screenshot from 2025-08-24 22-48-24" src="https://github.com/user-attachments/assets/5b482627-8a46-4e43-a1a6-21b02aad76fe" />
 
 - - -
 
