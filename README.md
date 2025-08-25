@@ -1,8 +1,5 @@
-##why i made this
-learnin ~~react~~ (ill use react for something else) + electron for desktop app.. 
-
-i would share the app, but its too big to upload to github (thats electron for ya) --> if you want it, contact me somehow :)
-
+## why i made this
+learnin ~~react (ill use react for something else) and~~ electron for desktop app.. 
 
 ## potential updates
 some things i would add:
@@ -10,19 +7,26 @@ some things i would add:
 - offline access (by importing own streams)
 - station management (dynamic page construction -> react / json)
 - tracker for how many minutes spent working / studying
-- some ux improvements (ui coherency, sfx)
+- some ux improvements (ui coherency, more sfx)
 
-please let me humbly note that i already have all the logic for these features worked out.. im just too lazy / dont care to program them at this moment :/
+humble note: i already have all the logic for these features worked out.. im just too lazy / dont care to program them at this moment
 
-## resoures
+## resources
 radios connected to:
 
 - (lofi 24/7) http://usa9.fastcast4u.com/proxy/jamz?mp=/1
 - (chillofi) https://azc.rdstream-5677.dez.ovh/listen/chillofi/radio.mp3
 - (nightwave plaza) http://radio.plaza.one/ogg
+
+other stuff
+
 - cat picture --> some ai im too lazy to find it
 
 ## inspiration
+
+"Lilo" (Lofi music radio) app on phone
+
+"Flipclock" (https://flipclock.us/) website 
 
 luna - my tech savvy black kitty
 
