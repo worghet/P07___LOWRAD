@@ -1,54 +1,71 @@
+// Setup Electron.
 const electron = require('electron');
 const app = electron.app;
+
+// Constants for later.
 const path = require('path');
+const DEFAULT_HEIGHT = 950
 
-//const { app, BrowserWindow } = require('electron');
 
-
-// get object from electron library
+// Get BrowserWindow class from electron library.
 const BrowserWindow = electron.BrowserWindow
 
-var mainWindow;
+// Window object.
+let window;
 
-// what to do when app ready
+// What to do when the app is ready.
 app.on('ready', function() {
 
-	// render window
-	mainWindow = new BrowserWindow({
-	  width: 950,
-	  height: 440,
-	  backgroundColor: '#FFFFFF',
-	  autoHideMenuBar: true,
-	  title: "LOWRAD",
-	  resizable: true,
-        icon: path.join(__dirname, "lowrad_icon.png")
+    // Build / Set up the window.
 
-    });
-    mainWindow.setMinimumSize(950, 440); // width, height
+    build_window()
 
+    // Add "dynamic functions".
 
-    mainWindow.loadFile("workshop.html");
+    window.on('resize', () => scale_window_contents());
 
-    mainWindow.setAspectRatio(950 / 440); // locks resizing to 16:9
-
-
-    mainWindow.webContents.on('did-finish-load', () => {
-        mainWindow.webContents.setZoomFactor(1); // 1 = 100%
-    });
-
-    mainWindow.on('resize', () => {
-        const [width, height] = mainWindow.getSize();
-        const baseHeight = 950;      // your "100%" scale reference
-        const scaleFactor = 2.1*height / baseHeight;
-        mainWindow.webContents.setZoomFactor(scaleFactor);
-    });
-
-
-
-	//mainWindow.loadFile('sample_ui.html');
-
-	// set window content to my github page :)
-	// mainWindow.loadURL('https://github.com/worghet');
-	
 });
+
+function build_window() {
+
+    // Construct the BrowserWindowobject.
+    window = new BrowserWindow({
+        width: 950,
+        height: 440,
+        backgroundColor: '#FFFFFF',
+        autoHideMenuBar: true,
+        title: "LOWRAD",
+        resizable: true,
+        icon: path.join(__dirname, "lowrad_icon.png")
+    });
+
+    // Set minimum size.
+    window.setMinimumSize(950, 440);
+
+    // Set a locked aspect ratio.
+    window.setAspectRatio(950 / 440);
+
+
+    // Set the contents to be the html.
+    window.loadFile("workshop.html");
+
+    // Reset scale factor on load.
+    window.webContents.on('did-finish-load', () => {
+        window.webContents.setZoomFactor(1);
+    });
+
+}
+
+function scale_window_contents() {
+
+    // Get current size of window.
+    const [width, height] = window.getSize();
+
+    // Calculate scale factor (made these # up, just works)
+    const scaleFactor = 2.1*height / DEFAULT_HEIGHT;
+
+    // Apply the zoom factor.
+    window.webContents.setZoomFactor(scaleFactor);
+
+}
 

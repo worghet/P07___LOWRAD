@@ -3,7 +3,6 @@
     src: url('assets/pixdig.otf') format('opentype');
 }
 
-
 * {
     font-family: 'pixdig', monospace;
     letter-spacing: 3px;
@@ -12,9 +11,8 @@
 }
 
 
-/*button {*/
-/*    cursor: url("default_pointing.cur"), auto;*/
-/*}*/
+/* ------------------------------------------- */
+
 
 #radio {
     margin: 5%;
@@ -22,26 +20,21 @@
 
 #stations {
     padding-bottom: 10px;
-    /*border: solid 6px black;*/
-    width: 400px; /* set a fixed width for now */
-    /*height: 200px;  !* set a fixed height *!*/
+    width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 10px; /* space between buttons */
-    /*grid-template-columns: 1fr 1fr 1fr; !* 3 buttons across *!*/
+    gap: 10px;
 }
 
 
 #stations button {
     width: 100%;
     height: 100%;
-    border: none; /* cool effect if removed*/
+    border: none;
     padding: 10px 0px 10px 0px;
-    /*border: 5px solid #AAAAAA;  FANCY EFFECT!!*/
     box-shadow: 0 5px #AAAAAA;
-    background: #CCCCCC; /* retro yellow */
+    background: #CCCCCC;
     font-size: 20px;
-    /*font-family: monospace;*/
     cursor: pointer;
     transition: all 0.1s;
 }
@@ -59,10 +52,11 @@
 
 #stations button:active {
     transform: translateY(5px);
-    box-shadow: 0 0 #AAAAAA; /* remove shadow instead of border */
+    box-shadow: 0 0 #AAAAAA;
 }
 
 /* -------------------------------- */
+
 #cat-side {
     position: absolute;
     top: 0;
@@ -70,17 +64,15 @@
     width: 50%;
     height: 100%;
     display: flex;
-    justify-content: center; /* keeps it horizontally centered */
-    align-items: flex-end;   /* pushes image to the bottom */
+    justify-content: center;
+    align-items: flex-end;
 }
 
 #cat-side img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain; /* preserves aspect ratio */
+    object-fit: contain;
 }
-
-
 
 
 /* -------------------------------- */
@@ -107,24 +99,12 @@
     transition: transform 0.1s;
 }
 
-
-/*#controls button.active {*/
-/*    transform: translateY(5px);*/
-/*    box-shadow: 0 0 #AAAAAA;*/
-/*    background: #888888;*/
-/*    color: white;*/
-/*    filter: invert(1);*/
-
-
-/*}*/
-
 #controls button.active {
     transform: translateY(5px);
-    box-shadow: 0 0 #AAAAAA; /* remove shadow to show pressed */
-    background: #888888;     /* dark gray */
-    filter: invert(1);        /* inverts colors of the icon */
-    cursor: not-allowed;   /* shows the blocked cursor */
-
+    box-shadow: 0 0 #AAAAAA;
+    background: #888888;
+    filter: invert(1);
+    cursor: not-allowed;
 }
 
 
@@ -140,22 +120,24 @@
     background: #888888;
 }
 
+
 /* ------------------------------------------- */
+
+
 #timer-controls {
     display: flex;
-    width: 400px;   /* align with stations */
-    height: 60px;   /* same as play/stop buttons */
+    width: 400px;
+    height: 60px;
     margin-top: 10px;
     box-sizing: border-box;
-    border: 2px solid #888888; /* same as divider thickness */
+    border: 2px solid #888888;
 }
 
-/* Input */
 #timer-controls input {
     width: 100px;
     height: 100%;
-    border: none; /* rely on parent border */
-    border-right: 2px solid #888888; /* divider */
+    border: none;
+    border-right: 2px solid #888888;
     background: #EEEEEE;
     font-family: 'pixdig', monospace;
     font-size: 24px;
@@ -164,42 +146,33 @@
     box-sizing: border-box;
 }
 
-/* Button */
 #timer-controls button {
     flex: 1;
     height: 100%;
-    border: none; /* rely on parent border */
-    background: #CCCCCC; /* distinct from input */
+    border: none;
+    background: #CCCCCC;
     cursor: pointer;
     font-family: 'pixdig', monospace;
-    font-size: 20px; /* match rest of page’s button/text scale */
+    font-size: 20px;
     box-shadow: none;
     transition: background 0.1s;
 }
 
-/* Hover + active */
 #timer-controls button:hover {
-    /*background-color: #CCCCCC;*/
     filter: brightness(90%);
-
 }
 
 #timer-controls button:active {
     transform: translateY(0px);
-    background: #888888;    /* same as stop button active */
-    color: white;           /* match text */
-
-    /*transform: translateY(5px);*/
-    /*box-shadow: 0 0 #AAAAAA; !* remove shadow to show pressed *!*/
-    /*background: #888888;     !* dark gray *!*/
-    /*filter: invert(1);*/
+    background: #888888;
+    color: white;
 }
 
 #timer-start-btn:disabled {
-    background: #888888;    /* same as stop button active */
-    color: white;           /* match text */
-    cursor: not-allowed;    /* disabled cursor */
-    box-shadow: none;       /* keep inset/shadow as is */
+    background: #888888;
+    color: white;
+    cursor: not-allowed;
+    box-shadow: none;
 }
 
 #timer-start-btn:disabled:hover {
@@ -208,26 +181,19 @@
 }
 
 
-
-
-
-
-
+/* ------------------------------------------- */
 
 
 #timer {
     display: flex;
-    flex-direction: column;      /* stack text + buttons */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    min-height: 95vh;           /* optional: ensures full screen if you want */
+    min-height: 95vh;
     font-family: 'pixdig', monospace;
     letter-spacing: 3px;
-    position: relative;          /* for absolutely positioned buttons */
-    /*padding: 20px;               !* optional for spacing *!*/
+    position: relative;
 }
-
 
 #timer p {
     font-size: 35vh;
@@ -235,27 +201,10 @@
     margin: 0;
 }
 
-/*#timer-buttons {*/
-/*    position: absolute;*/
-/*    top: 10px;*/
-/*    left: 10px;*/
-/*    display: flex;*/
-/*    gap: 10px;*/
-/*}*/
-
-
-/*#timer-buttons button {*/
-/*    padding: 4px 6px;*/
-/*    font-family: 'pixdig', monospace;*/
-/*    font-size: 14px;*/
-/*    cursor: pointer;*/
-/*}*/
-
-
  #timer-buttons {
      position: absolute;
-     top: 2px;   /* distance from bottom */
-     left: 2px;     /* distance from left */
+     top: 2px;
+     left: 2px;
      display: flex;
      gap: 10px;
  }
@@ -263,10 +212,9 @@
 #timer-buttons button {
     padding: 4px 6px;
     font-family: 'pixdig', monospace;
-    font-size: 14px;        /* same as other buttons */
-    background: #CCCCCC;    /* retro gray */
+    font-size: 14px;
+    background: #CCCCCC;
     border: 2px solid #888888;
-    /*box-shadow: 0 5px #AAAAAA;*/
     cursor: pointer;
     transition: all 0.1s;
 }
@@ -280,12 +228,8 @@
     color: white;
 }
 
+/* ------------------------------------------- */
 
-
-
-
-
-/*--------*/
 /*.min-spent {*/
 /*    border: #888888 1px solid;*/
 /*    padding: 2px 5px;*/
