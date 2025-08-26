@@ -1,4 +1,4 @@
-### note: build zip is too big to release here - contact me if you want it (or build it urself w electron) 
+### note: build zip is too big to release here - contact me if you want it :)
 
 - - -
 
